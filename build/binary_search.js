@@ -1,9 +1,10 @@
+"use strict";
 function binary_search(list, item) {
-    var low = 0;
-    var high = list.length - 1;
+    let low = 0;
+    let high = list.length - 1;
     while (low <= high) {
-        var mid = Math.floor((low + high) / 2);
-        var guess = list[mid];
+        let mid = Math.floor((low + high) / 2);
+        let guess = list[mid];
         if (guess === item) {
             return mid;
         }
@@ -16,6 +17,6 @@ function binary_search(list, item) {
     }
     return null;
 }
-var my_list = [1, 3, 5, 7, 9];
+const my_list = [1, 3, 5, 7, 9];
 console.log(binary_search(my_list, 3)); // 1
 console.log(binary_search(my_list, -1)); // null
